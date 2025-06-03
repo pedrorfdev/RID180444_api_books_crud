@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.booksRouter = void 0;
+const express_1 = require("express");
+const books_controller_1 = require("../controllers/books.controller");
+const validate_1 = require("../middlewares/validate");
+const create_book_schema_1 = require("../schemas/create-book-schema");
+const get_book_by_id_schema_1 = require("../schemas/get-book-by-id-schema");
+const get_book_by_isbn_1 = require("../schemas/get-book-by-isbn");
+const update_book_schema_1 = require("../schemas/update-book-schema");
+exports.booksRouter = (0, express_1.Router)();
+const controller = new books_controller_1.BooksController();
+exports.booksRouter.get("/", controller.getBooks.bind(controller));
+exports.booksRouter.get("/:id", (0, validate_1.validate)(get_book_by_id_schema_1.getBookByIdSchema, "params"), controller.getBookDetails.bind(controller));
+exports.booksRouter.get("/search", (0, validate_1.validate)(get_book_by_isbn_1.getBookByIsbnSchema, "query"), controller.getBookByIsbn.bind(controller));
+exports.booksRouter.post("/", (0, validate_1.validate)(create_book_schema_1.createBookSchema, "body"), controller.createBook.bind(controller));
+exports.booksRouter.put("/:id", (0, validate_1.validate)(update_book_schema_1.updateBookSchema, "body"), controller.updateBook.bind(controller));
+exports.booksRouter.delete("/:id", controller.deleteBook.bind(controller));

@@ -1,4 +1,4 @@
-import { BooksRepository } from "src/repository/books-repository";
+import { BooksRepository } from "../repository/books-repository";
 
 export class DeleteBookService {
   constructor(private booksRepository: BooksRepository) {}

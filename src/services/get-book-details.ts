@@ -1,6 +1,6 @@
 import { Book } from "@prisma/client";
-import AppError from "src/errors/app-error";
-import { BooksRepository } from "src/repository/books-repository";
+import AppError from "../errors/app-error";
+import { BooksRepository } from "../repository/books-repository";
 
 export class GetBookDetailsService {
   constructor(private booksRepository: BooksRepository) {}

@@ -1,6 +1,6 @@
 import { Book } from "@prisma/client";
-import AppError from "src/errors/app-error";
-import { prisma } from "src/lib/prisma";
+import AppError from "../../errors/app-error";
+import { prisma } from "../../lib/prisma";
 import { BooksRepository } from "../books-repository";
 
 export class PrismaBooksRepository implements BooksRepository {

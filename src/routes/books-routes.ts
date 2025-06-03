@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { BooksController } from "src/controllers/books.controller";
-import { validate } from "src/middlewares/validate";
-import { createBookSchema } from "src/schemas/create-book-schema";
-import { getBookByIdSchema } from "src/schemas/get-book-by-id-schema";
-import { getBookByIsbnSchema } from "src/schemas/get-book-by-isbn";
-import { updateBookSchema } from "src/schemas/update-book-schema";
+import { BooksController } from "../controllers/books.controller";
+import { validate } from "../middlewares/validate";
+import { createBookSchema } from "../schemas/create-book-schema";
+import { getBookByIdSchema } from "../schemas/get-book-by-id-schema";
+import { getBookByIsbnSchema } from "../schemas/get-book-by-isbn";
+import { updateBookSchema } from "../schemas/update-book-schema";
 
 export const booksRouter = Router();
 

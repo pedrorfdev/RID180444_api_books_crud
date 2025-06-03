@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { PrismaBooksRepository } from "src/repository/prisma/prisma-books-repository";
-import { CreateBookService } from "src/services/create-book";
-import { DeleteBookService } from "src/services/delete-book";
-import { GetBookByIsbnService } from "src/services/get-book-by-isbn";
-import { GetBookDetailsService } from "src/services/get-book-details";
-import { GetBooksService } from "src/services/get-books";
-import { UpdateBookService } from "src/services/update-book";
+import { PrismaBooksRepository } from "../repository/prisma/prisma-books-repository";
+import { CreateBookService } from "../services/create-book";
+import { DeleteBookService } from "../services/delete-book";
+import { GetBookByIsbnService } from "../services/get-book-by-isbn";
+import { GetBookDetailsService } from "../services/get-book-details";
+import { GetBooksService } from "../services/get-books";
+import { UpdateBookService } from "../services/update-book";
 
 export class BooksController {
   private booksRepository = new PrismaBooksRepository();

@@ -1,5 +1,5 @@
 import { Book } from "@prisma/client";
-import { BooksRepository } from "src/repository/books-repository";
+import { BooksRepository } from "../repository/books-repository";
 
 interface CreateBookInput {
   title: string;

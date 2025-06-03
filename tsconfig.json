@@ -13,5 +13,7 @@
     "moduleResolution": "node16",
 
     "baseUrl": ".",
+    "outDir": "dist",
+    "rootDir": "src",
   }
 }
