@@ -1,7 +1,7 @@
 import { Router } from "express";
+import { createBookSchema } from "src/schemas/create-book-schema";
 import { BooksController } from "../controllers/books.controller";
 import { validate } from "../middlewares/validate";
-import { createBookSchema } from "../schemas/create-book-schema";
 import { getBookByIdSchema } from "../schemas/get-book-by-id-schema";
 import { getBookByIsbnSchema } from "../schemas/get-book-by-isbn";
 import { updateBookSchema } from "../schemas/update-book-schema";
@@ -28,6 +28,7 @@ booksRouter.post(
   validate(createBookSchema, "body"),
   controller.createBook.bind(controller)
 );
+
 booksRouter.put(
   "/:id",
   validate(updateBookSchema, "body"),

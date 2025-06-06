@@ -12,6 +12,7 @@ export class CreateBookService {
   constructor(private booksRepository: BooksRepository) {}
 
   async execute(data: CreateBookInput): Promise<Book> {
+    console.log(data);
     const existingBook = await this.booksRepository.findByIsbn(data.isbn_code);
 
     if (existingBook) {
@@ -19,6 +20,7 @@ export class CreateBookService {
     }
 
     const book = await this.booksRepository.create(data);
+
     return book;
   }
 }

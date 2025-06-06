@@ -6,7 +6,13 @@ import routes from "./routes";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://books-central.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(routes);
 app.use(errorHandler);

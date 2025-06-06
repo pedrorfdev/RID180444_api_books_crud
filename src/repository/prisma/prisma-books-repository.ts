@@ -17,8 +17,8 @@ export class PrismaBooksRepository implements BooksRepository {
       },
     });
 
-    if (!book) {
-      throw new AppError("Book not found!", 404);
+    if (book) {
+      throw new AppError("Book with same isbn_code!", 409);
     }
 
     return book;
