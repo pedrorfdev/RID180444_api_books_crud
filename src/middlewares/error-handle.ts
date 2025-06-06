@@ -13,7 +13,7 @@ export function errorHandler(
       message: error.message,
     });
   }
-  console.error("🔥 Internal Server Error: ", error);
+  console.error("Internal Server Error 🔥: ", error);
   return res.status(500).json({
     type: "error",
     message: "Internal Server Error.",
