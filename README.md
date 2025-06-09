@@ -17,20 +17,19 @@ API RESTful construída com Node.js, Express, Prisma ORM e PostgreSQL, responsá
 - Criar livros
 - Listar todos os livros
 - Buscar livro por ID
-- Buscar livro por ISBN
 - Atualizar dados de um livro
 - Deletar livro
 
 ## 🧱 Estrutura do Projeto
 
-src/
-├── controllers/
-├── middlewares/
-├── repository/
-│ └── prisma/
-├── routes/
-├── schemas/
-└── server.ts
+src/ <br/>
+├── controllers/ <br/>
+├── middlewares/ <br/>
+├── repository/ <br/>
+│ └── prisma/ <br/>
+├── routes/ <br/>
+├── schemas/ <br/>
+└── server.ts <br/>
 
 👨‍💻 Autor
 * **Pedro Ferreira** - [pedrorf.dev](https://github.com/pedrorfdev)
